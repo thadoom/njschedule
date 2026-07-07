@@ -1,4 +1,4 @@
-window.NJ_GAMES=[
+window.SCHEDULE_GAMES=[
   {name:'League of Legends',cover:'league-of-legends.png'},
   {name:'Mafia: Old Town',cover:'mafia-old-town.jpg'},
   {name:'Valorant',cover:'vvalorant.png'},
