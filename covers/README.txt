@@ -1,9 +1,8 @@
-Place the game cover images in this folder.
+Place activity cover images in this folder.
 
-Also update `list.js` with the filenames you want to show in the dropdown.
+Update list.js to connect each activity name to its image file.
 
-Examples:
-- league-of-legends.png
-- valorant.jpg
-- stardew-valley.jpg
-- ori-and-the-blind-forest.jpg
+Example:
+{name:'Valorant',cover:'valorant.jpg'}
+
+Use an empty cover value for activities such as Just Chatting.
