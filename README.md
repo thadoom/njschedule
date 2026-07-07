@@ -1,35 +1,60 @@
-# NJ Weekly Schedule
+# Schedule Maker
 
-Static web tool for creating and exporting NJ's weekly stream schedule.
+A static, browser-based schedule creator for streamers, creators and online communities.
+
+Create a weekly schedule, choose activities, set times, switch visual themes and export a 1920×1080 PNG ready for Discord, social media or community posts.
 
 ## Features
 
-- choose the game or activity for every day from a dropdown
-- automatically link the selected activity name and cover
-- edit the stream time for every day
-- enable or disable individual days
-- add a profile image
-- export a 1920×1080 PNG
-- save the current setup in the browser
-- works locally and on GitHub Pages
+- activity dropdown for every day
+- automatic activity name and cover pairing
+- editable stream times
+- enable or disable any day
+- custom profile image or avatar
+- multiple light, colorful and dark themes
+- playful, minimal and tech-style decorations
+- browser local storage
+- PNG export at 1920×1080
+- static hosting with no build step
+- GitHub Pages compatible
+
+## Themes
+
+Included palettes:
+
+- Lilac Cloud
+- Rose Milk
+- Mint Candy
+- Midnight Steel
+- Ocean Blue
+- Carbon Ember
+
+## Decorations
+
+Included visual moods:
+
+- Dreamy Bubbles
+- Cute Stickers
+- Soft Minimal
+- Tech Grid
+- Sharp Lines
+- Neon Orbit
 
 ## Activity catalog
 
 The activity dropdown is generated from `covers/list.js`.
 
-Each entry links a visible activity name to its cover:
+Each item connects a visible name with a cover image:
 
 ```js
-window.NJ_GAMES = [
+window.SCHEDULE_GAMES = [
   { name: 'League of Legends', cover: 'league-of-legends.png' },
   { name: 'Valorant', cover: 'valorant.jpg' },
   { name: 'Just Chatting', cover: '' }
 ];
 ```
 
-Put cover image files inside `covers/`.
-
-Examples:
+Place the image files inside `covers/`.
 
 ```text
 covers/
@@ -40,18 +65,18 @@ covers/
 └─ list.js
 ```
 
-Adding a new object to `window.NJ_GAMES` makes that activity appear in the editor dropdown. The selected item automatically controls both the displayed name and the cover used in the exported schedule.
-
-Supported image formats: PNG, JPG, JPEG and WEBP.
+Add a new object to `window.SCHEDULE_GAMES` to make a new activity appear in the editor.
 
 ## Run locally
 
-Open `index.html` in a browser.
+Open `index.html` in a modern browser.
 
 ## GitHub Pages
 
-Publish the repository from the main branch and root directory in:
+Go to:
 
 `Settings → Pages → Deploy from a branch`
 
-The project is static and does not need a build step.
+Select the default branch and `/root`.
+
+No build step is required.
