@@ -4,17 +4,30 @@ Static web tool for creating and exporting NJ's weekly stream schedule.
 
 ## Features
 
-- edit activity and time for every day
+- choose the game or activity for every day from a dropdown
+- automatically link the selected activity name and cover
+- edit the stream time for every day
 - enable or disable individual days
 - add a profile image
-- choose game covers from a dropdown
 - export a 1920×1080 PNG
 - save the current setup in the browser
 - works locally and on GitHub Pages
 
-## Covers
+## Activity catalog
 
-Put the image files inside `covers/` and list them in `covers/list.js`.
+The activity dropdown is generated from `covers/list.js`.
+
+Each entry links a visible activity name to its cover:
+
+```js
+window.NJ_GAMES = [
+  { name: 'League of Legends', cover: 'league-of-legends.png' },
+  { name: 'Valorant', cover: 'valorant.jpg' },
+  { name: 'Just Chatting', cover: '' }
+];
+```
+
+Put cover image files inside `covers/`.
 
 Examples:
 
@@ -27,9 +40,9 @@ covers/
 └─ list.js
 ```
 
-Every filename added in `covers/list.js` will appear in the dropdown inside the editor.
+Adding a new object to `window.NJ_GAMES` makes that activity appear in the editor dropdown. The selected item automatically controls both the displayed name and the cover used in the exported schedule.
 
-Supported formats: PNG, JPG, JPEG and WEBP.
+Supported image formats: PNG, JPG, JPEG and WEBP.
 
 ## Run locally
 
