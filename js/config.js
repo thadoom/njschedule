@@ -1,13 +1,13 @@
 window.NJ_CONFIG={
   storageKey:'nj-weekly-schedule',
   days:[
-    {key:'mon',short:'MON',label:'Lun'},
-    {key:'tue',short:'TUE',label:'Mar'},
-    {key:'wed',short:'WED',label:'Mer'},
-    {key:'thu',short:'THU',label:'Gio'},
-    {key:'fri',short:'FRI',label:'Ven'},
-    {key:'sat',short:'SAT',label:'Sab'},
-    {key:'sun',short:'SUN',label:'Dom'}
+    {key:'mon',short:'LUN',label:'Lun'},
+    {key:'tue',short:'MAR',label:'Mar'},
+    {key:'wed',short:'MER',label:'Mer'},
+    {key:'thu',short:'GIO',label:'Gio'},
+    {key:'fri',short:'VEN',label:'Ven'},
+    {key:'sat',short:'SAB',label:'Sab'},
+    {key:'sun',short:'DOM',label:'Dom'}
   ],
   defaults:{
     mon:{enabled:true,activity:'League of Legends',time:'10:30',cover:'league-of-legends.png'},
