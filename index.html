@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#120d1c">
+  <title>NJ Weekly Schedule</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=DynaPuff:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <header class="brand">
+        <div class="brand-mark">NJ</div>
+        <div>
+          <h1>Weekly Schedule</h1>
+          <p>Crea la settimana, aggiungi le cover, esporta il post.</p>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2>Identità</h2>
+        <label>Titolo grande<input id="title" type="text" maxlength="32" value="STREAM SCHEDULE"></label>
+        <div class="two">
+          <label>Settimana<input id="weekLabel" type="text" maxlength="24"></label>
+          <label>Handle<input id="channel" type="text" maxlength="28" value="@narcisnj"></label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Programma</h2>
+          <button id="currentWeekBtn" class="tiny" type="button">Settimana attuale</button>
+        </div>
+        <div id="days" class="days"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Foto profilo</h2>
+        <div class="upload-box">
+          <img id="avatarPreview" alt="Anteprima">
+          <div>
+            <strong>Foto o illustrazione</strong>
+            <span>PNG, JPG o WEBP. Rimane nel browser.</span>
+            <input id="avatarFile" type="file" accept="image/png,image/jpeg,image/webp">
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Look</h2>
+        <div class="two">
+          <label>Palette
+            <select id="theme">
+              <option value="lilac">Cute Lilac</option>
+              <option value="night">Lilac Night</option>
+              <option value="rose">Rose Milk</option>
+              <option value="mint">Mint Candy</option>
+            </select>
+          </label>
+          <label>Font titolo
+            <select id="fontStyle">
+              <option value="dynapuff">DynaPuff</option>
+              <option value="bricolage">Bricolage</option>
+              <option value="syne">Syne</option>
+            </select>
+          </label>
+        </div>
+        <label>Mood
+          <select id="decoration">
+            <option value="dreamy">Dreamy bubbles</option>
+            <option value="stickers">Cute stickers</option>
+            <option value="minimal">Soft minimal</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="panel covers-help">
+        <h2>Copertine giochi</h2>
+        <p>Metti le immagini nella cartella <code>covers/</code>. Nei giorni puoi indicare il nome file, ad esempio <code>valorant.jpg</code>. Se lasci vuoto, il sito prova lo slug del nome attività.</p>
+      </section>
+
+      <div class="actions">
+        <button id="saveBtn" class="secondary" type="button">Salva</button>
+        <button id="resetBtn" class="danger" type="button">Reset</button>
+        <button id="downloadBtn" class="primary" type="button">Esporta PNG 1920 × 1080</button>
+      </div>
+    </aside>
+
+    <main class="stage">
+      <div class="stage-head">
+        <div><h2>Anteprima live</h2><p>Quello che vedi è quello che verrà esportato.</p></div>
+        <div id="status" class="status">● salvataggio locale attivo</div>
+      </div>
+      <div class="canvas-shell"><canvas id="scheduleCanvas" width="1920" height="1080"></canvas></div>
+      <p class="tip">Formato 16:9 pronto per Discord e social.</p>
+    </main>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/draw.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
