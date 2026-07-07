@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#120d1c">
-  <title>NJ Weekly Schedule</title>
+  <meta name="theme-color" content="#111318">
+  <title>Schedule Maker</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=DynaPuff:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,10 +14,10 @@
   <div class="app">
     <aside class="sidebar">
       <header class="brand">
-        <div class="brand-mark">NJ</div>
+        <div class="brand-mark">SM</div>
         <div>
-          <h1>Weekly Schedule</h1>
-          <p>Scegli le attività, cambia gli orari, esporta il post.</p>
+          <h1>Schedule Maker</h1>
+          <p>Scegli attività, orari e stile. Esporta il tuo planning.</p>
         </div>
       </header>
 
@@ -26,7 +26,7 @@
         <label>Titolo grande<input id="title" type="text" maxlength="32" value="STREAM SCHEDULE"></label>
         <div class="two">
           <label>Settimana<input id="weekLabel" type="text" maxlength="24"></label>
-          <label>Handle<input id="channel" type="text" maxlength="28" value="@narcisnj"></label>
+          <label>Handle<input id="channel" type="text" maxlength="28" value="@yourchannel"></label>
         </div>
       </section>
 
@@ -39,11 +39,11 @@
       </section>
 
       <section class="panel">
-        <h2>Foto profilo</h2>
+        <h2>Immagine profilo</h2>
         <div class="upload-box">
           <img id="avatarPreview" alt="Anteprima">
           <div>
-            <strong>Foto o illustrazione</strong>
+            <strong>Foto, avatar o illustrazione</strong>
             <span>PNG, JPG o WEBP. Rimane nel browser.</span>
             <input id="avatarFile" type="file" accept="image/png,image/jpeg,image/webp">
           </div>
@@ -51,14 +51,16 @@
       </section>
 
       <section class="panel">
-        <h2>Look</h2>
+        <h2>Stile</h2>
         <div class="two">
           <label>Palette
             <select id="theme">
-              <option value="lilac">Cute Lilac</option>
-              <option value="night">Lilac Night</option>
+              <option value="lilac">Lilac Cloud</option>
               <option value="rose">Rose Milk</option>
               <option value="mint">Mint Candy</option>
+              <option value="midnight">Midnight Steel</option>
+              <option value="ocean">Ocean Blue</option>
+              <option value="carbon">Carbon Ember</option>
             </select>
           </label>
           <label>Font titolo
@@ -69,18 +71,21 @@
             </select>
           </label>
         </div>
-        <label>Mood
+        <label>Decorazioni
           <select id="decoration">
-            <option value="dreamy">Dreamy bubbles</option>
-            <option value="stickers">Cute stickers</option>
-            <option value="minimal">Soft minimal</option>
+            <option value="dreamy">Dreamy Bubbles</option>
+            <option value="stickers">Cute Stickers</option>
+            <option value="minimal">Soft Minimal</option>
+            <option value="grid">Tech Grid</option>
+            <option value="lines">Sharp Lines</option>
+            <option value="orbit">Neon Orbit</option>
           </select>
         </label>
       </section>
 
       <section class="panel covers-help">
         <h2>Attività e copertine</h2>
-        <p>Nel programma scegli direttamente un gioco o Just Chatting. Il nome e la copertina vengono collegati automaticamente usando il catalogo in <code>covers/list.js</code>.</p>
+        <p>Il catalogo è in <code>covers/list.js</code>. Ogni attività collega automaticamente nome e cover.</p>
       </section>
 
       <div class="actions">
@@ -96,7 +101,7 @@
         <div id="status" class="status">● salvataggio locale attivo</div>
       </div>
       <div class="canvas-shell"><canvas id="scheduleCanvas" width="1920" height="1080"></canvas></div>
-      <p class="tip">Formato 16:9 pronto per Discord e social.</p>
+      <p class="tip">Formato 16:9 pronto per Discord, social e community post.</p>
     </main>
   </div>
   <script src="covers/list.js"></script>
